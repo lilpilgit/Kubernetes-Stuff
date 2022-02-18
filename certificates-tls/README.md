@@ -1,6 +1,8 @@
 ### How to install a TLS certificate from .pfx file
 
-
+````diff
+!! N.B Before install the new secret, is recommended to delete the previous secret used. !!
+````
 1. Extract the .key file from the .pfx file:
 ```console
 openssl pkcs12 -in pfx-filename.pfx -nocerts -out key-filename-encrypted.key
