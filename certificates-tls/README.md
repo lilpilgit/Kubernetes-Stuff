@@ -3,7 +3,7 @@
 
 1. Extract the .key file from the .pfx file:
 ```console
-openssl pkcs12 -in pfx-filename.pfx -nocerts -out key-filename.key
+openssl pkcs12 -in pfx-filename.pfx -nocerts -out key-filename-encrypted.key
 ```
 
 2. Decrypt the .key file:
