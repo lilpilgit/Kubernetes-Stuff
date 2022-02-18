@@ -18,7 +18,7 @@ openssl pkcs12 -in pfx-filename.pfx -clcerts -nokeys -out crt-filename.crt
 
 4. Create a secret in your Kubernetes cluster:
 ```console
-kubectl create secret tls <your-secret-name> --cert crt-filename.crt --key key-filename-decrypted.key
+kubectl create secret tls <your-secret-name> --cert crt-filename.crt --key key-filename-decrypted.key -n <namespace>
 ```
 
 5. Verify that your new secret exists in your clusters namespace:
