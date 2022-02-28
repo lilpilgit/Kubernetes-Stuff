@@ -1,0 +1,134 @@
+#vhost per ambiente di dev
+apiVersion: rabbitmq.com/v1beta1
+kind: Vhost
+metadata:
+  name:  1750-d-tdtr-vhost # <-------------------------------------------
+  namespace: 9204-q-broker
+spec:
+  name: 1750-d-tdtr-vhost # <-------------------------------------------
+  rabbitmqClusterReference:
+    name: broker
+---
+#vhost per ambiente di preprod
+apiVersion: rabbitmq.com/v1beta1
+kind: Vhost
+metadata:
+  name:  1750-q-tdtr-vhost # <-------------------------------------------
+  namespace: 9204-q-broker
+spec:
+  name: 1750-q-tdtr-vhost # <-------------------------------------------
+  rabbitmqClusterReference:
+    name: broker
+---
+#secret per ambiente di dev
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ut-1750-d-tdtr-user-secret # <-------------------------------------------
+  namespace: 9204-q-broker
+type: Opaque
+stringData:
+  username: <USERNAME> # <-------------------------------------------
+  password: <PASSWORD> # <-------------------------------------------
+---
+#secret per ambiente di preprod
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ut-1750-q-tdtr-user-secret # <-------------------------------------------
+  namespace: 9204-q-broker
+type: Opaque
+stringData:
+  username: <USERNAME> # <-------------------------------------------
+  password: <PASSWORD> # <-------------------------------------------
+---
+#user per ambiente di dev
+apiVersion: rabbitmq.com/v1beta1
+kind: User
+metadata:
+  name: ut-1750-broker-d # <-------------------------------------------
+  namespace: 9204-q-broker
+spec:
+  tags:
+  - management
+  rabbitmqClusterReference:
+    name: broker # rabbitmqCluster must exist in the same namespace as this resource
+  importCredentialsSecret:
+    name: ut-1750-d-tdtr-user-secret # <-------------------------------------------
+---
+#user per ambiente di preprod
+apiVersion: rabbitmq.com/v1beta1
+kind: User
+metadata:
+  name: ut-1750-broker-q # <-------------------------------------------
+  namespace: 9204-q-broker
+spec:
+  tags:
+  - management
+  rabbitmqClusterReference:
+    name: broker # rabbitmqCluster must exist in the same namespace as this resource
+  importCredentialsSecret:
+    name: ut-1750-q-tdtr-user-secret # <-------------------------------------------
+---
+#permission per ambiente di dev
+apiVersion: rabbitmq.com/v1beta1
+kind: Permission
+metadata:
+  name: 1750-d-tdtr-user-permission # <-------------------------------------------
+  namespace: 9204-q-broker
+spec:
+  vhost: "1750-d-tdtr-vhost" # <-------------------------------------------
+  user: "ut-1750-broker-d" # name of the RabbitMQ user # <-------------------------------------------
+  permissions:
+    write: ".*"
+    configure: ".*"
+    read: ".*"   
+  rabbitmqClusterReference:
+    name: broker
+---
+#permission per ambiente di preprod
+apiVersion: rabbitmq.com/v1beta1
+kind: Permission
+metadata:
+  name: 1750-q-tdtr-user-permission # <-------------------------------------------
+  namespace: 9204-q-broker
+spec:
+  vhost: "1750-q-tdtr-vhost" # <-------------------------------------------
+  user: "ut-1750-broker-q" # name of the RabbitMQ user # <-------------------------------------------
+  permissions:
+    write: ".*"
+    configure: ".*"
+    read: ".*"   
+  rabbitmqClusterReference:
+    name: broker
+
+
+# ---
+# apiVersion: rabbitmq.com/v1beta1
+# kind: Queue
+# metadata:
+#   name: 1750-q-tdtr-queue-1
+#   namespace: 9204-q-broker
+# spec:
+#   name: 1750-q-tdtr-queue-1 # name of the queue
+#   vhost: "1750-q-tdtr-vhost"
+#   autoDelete: false
+#   durable: true
+#   rabbitmqClusterReference:
+#     name: broker
+#     namespace: 9204-q-broker
+# ---
+# apiVersion: rabbitmq.com/v1beta1
+# kind: Binding
+# metadata:
+#   name:  1750-q-tdtr-binding-1
+#   namespace: 9204-q-broker
+# spec:
+#   vhost: "1750-q-tdtr-vhost" # default to '/' if not provided
+#   source: amq.topic # an existing exchange
+#   destination: "1750-q-tdtr-queue-1" # an existing queue
+#   destinationType: queue # can be 'queue' or 'exchange'
+#   routingKey: topic1 # nome della topic
+#   rabbitmqClusterReference:
+#     name: broker
+# ---

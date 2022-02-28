@@ -1,0 +1,61 @@
+apiVersion: rabbitmq.com/v1beta1
+kind: RabbitmqCluster
+metadata:
+  name: broker
+  namespace: 9204-q-broker
+spec:
+  service:
+    type: LoadBalancer
+  override:
+    statefulSet:
+      spec:
+        template:
+          spec:
+            containers:
+            - name: rabbitmq
+              volumeMounts:
+              - mountPath: /etc/ssl/snam-certs/noprod
+                name: cert-noprod
+              - mountPath: /etc/ssl/certs/snam-ca.pem
+                name: snam-ca
+                subPath: snam-ca.pem
+                readOnly: false
+            volumes:
+            - name: cert-noprod
+              projected:
+                sources:
+                - secret:
+                    name: tanzu-tls-secret #nella cartella /etc/ssl/snam-certs/noprod ci saranno certificato e chiave del broker di noprod
+            - name: snam-ca
+              configMap:
+                name: snam-ca # nel file /etc/ssl/certs/snam-ca.pem è presente il certificato CA di Snam
+  rabbitmq:
+        additionalConfig: |
+          ssl_options.cacertfile = /etc/ssl/certs/snam-ca.pem
+          ssl_options.certfile = /etc/ssl/snam-certs/noprod/tls.crt
+          ssl_options.keyfile = /etc/ssl/snam-certs/noprod/tls.key
+          ssl_options.fail_if_no_peer_cert = false
+          ssl_options.verify = verify_none
+          ssl_options.depth  = 4
+        additionalPlugins: 
+          - rabbitmq_management
+          - rabbitmq_peer_discovery_k8s
+          - rabbitmq_mqtt
+          - rabbitmq_prometheus
+        advancedConfig: ""
+  tls:
+        secretName: tanzu-tls-secret
+        disableNonTLSListeners : true
+  replicas: 3 #suggerito da VMware: 3
+  persistence:
+    storageClassName: default-non-root # default-non-root per bypassare l'errore  <--------------------------------------
+    storage: 500G #suggerito da VMware: 500G <--------------------------------------
+  resources:
+        requests: 
+          cpu: 2 #suggerito da VMware: 2  <--------------------------------------
+          memory: 4G #suggerito da VMware: 4G  <--------------------------------------
+        limits:
+          cpu: 2 #suggerito da VMware: 2  <--------------------------------------
+          memory: 4G #suggerito da VMware: 4G  <--------------------------------------
+  imagePullSecrets:
+  - name: tanzu-imagepull-secret

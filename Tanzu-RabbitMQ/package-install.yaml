@@ -1,0 +1,11 @@
+apiVersion: packaging.carvel.dev/v1alpha1
+kind: PackageInstall
+metadata:
+  name: tanzu-rabbitmq
+  namespace: rabbitmq-system
+spec:
+  serviceAccountName: tanzu-operator  # Replace with service account name
+  packageRef:
+    refName: rabbitmq.tanzu.vmware.com
+    versionSelection:
+      constraints: 1.2.0 # Replace with release version
