@@ -1,6 +1,0 @@
-apiVersion: v1
-appVersion: 0.1.0
-description: A helm chart to deploy a connected Azure Container Registry extension
-  for Arc enabled Kubernetes.
-name: connected-registry
-version: 0.1.0
