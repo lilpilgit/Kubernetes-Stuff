@@ -1,0 +1,87 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "connected-registry.name" . }}
+  namespace: {{ include "connected-registry.namespace" . }}
+  labels: 
+    {{- include "connected-registry.labels" . | nindent 4 }}
+  annotations:
+    description: {{ .Chart.Description }}
+spec:
+  replicas: 1
+  strategy:
+    type: Recreate
+  selector:
+    matchLabels:
+      {{- include "connected-registry.selectorLabels" . | nindent 6 }}
+  template: 
+    metadata: 
+      labels:
+        {{- include "connected-registry.selectorLabels" . | nindent 8 }}
+      annotations:
+        {{- if .Values.Azure.proxySettings.isProxyEnabled }}
+        checksum/proxysecret: {{ include (print $.Template.BasePath "/proxy-secret.yaml") . | sha256sum }}
+        {{- end }}
+    spec:
+      volumes:
+        - name: storage
+          persistentVolumeClaim:
+            claimName: {{ include "connected-registry.pvc-name" . }}
+        {{- if not .Values.httpEnabled }}
+        - name: tls
+          secret:
+            secretName: {{ .Values.tls.secret | default (include "connected-registry.tls-secret-name" .) | quote }}
+        {{- end }}
+        {{- if and .Values.Azure.proxySettings.isProxyEnabled .Values.Azure.proxySettings.proxyCert }}
+        - name: proxy-certstore
+          secret:
+            secretName: proxy-cert
+        - name: ssl-certs
+          emptyDir: {}
+        {{- end }}
+      containers:
+        - name: connected-registry
+          image: {{ required "The image must be provided" .Values.image | quote }}
+          imagePullPolicy: IfNotPresent
+          env:
+            - name: ACR_REGISTRY_CONNECTION_STRING
+              valueFrom:
+                secretKeyRef:
+                  name: {{ include "connected-registry.connection-string-secret-name" . }}
+                  key: value
+            {{- if .Values.registryLoginServer }}
+            - name: ACR_REGISTRY_LOGIN_SERVER
+              value: {{ .Values.registryLoginServer | quote }}
+            {{- end }}
+          {{- if .Values.Azure.isProxyEnabled }}
+          envFrom:
+            - secretRef:
+                name: proxy-config
+          {{- end }}
+          ports:
+            - name: http
+              containerPort: 8080
+            {{- if not .Values.httpEnabled }}
+            - name: https
+              containerPort: 8443
+            {{- end }}
+          {{- with .Values.resources }}
+          resources:
+            {{- toYaml . | nindent 12 }}
+          {{- end }}
+          volumeMounts:
+            - name: storage
+              mountPath: /var/acr/data
+            {{- if not .Values.httpEnabled }}
+            - name: tls
+              mountPath: /var/acr/certs
+              readOnly: true
+            {{- end }}
+            {{- if and .Values.Azure.proxySettings.isProxyEnabled .Values.Azure.proxySettings.proxyCert }}
+            - name: ssl-certs
+              mountPath: /etc/ssl/certs/
+              readOnly: false
+            - mountPath: /usr/local/share/ca-certificates/proxy-cert.crt
+              subPath: proxy-cert.crt
+              name: proxy-certstore
+            {{- end }}

@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: {{ include "connected-registry.pvc-name" . }}
+  namespace: {{ include "connected-registry.namespace" . }}
+  labels:
+    {{- include "connected-registry.labels" . | nindent 4 }}
+  annotations:
+    description: {{ .Chart.Description }}
+spec:
+  accessModes:
+    - ReadWriteOnce
+  storageClassName: {{ required "pvc.storageClassName must be provided" .Values.pvc.storageClassName | quote }}
+  resources:
+    requests:
+      storage: {{ required "pvc.storageRequest must be provided" .Values.pvc.storageRequest | quote }}

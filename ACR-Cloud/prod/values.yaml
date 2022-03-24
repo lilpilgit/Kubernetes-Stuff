@@ -1,0 +1,39 @@
+connectionString: ""
+registryLoginServer: ""
+httpEnabled: false
+image: mcr.microsoft.com/acr/connected-registry:0.3.0
+
+# Application resource limits and requests with default values.
+resources:
+  limits:
+    cpu: 1000m
+    memory: 2Gi
+  requests:
+    cpu: 100m
+    memory: 200Mi
+
+# Persistent storage settings with default values.
+pvc:
+  storageClassName: azurefile
+  storageRequest: 10Gi
+
+# Service configuration with default values.
+service:
+  clusterIP: ""
+  httpPort: 80
+  httpsPort: 443
+
+# TLS settings
+tls:
+  crt: ""
+  key: ""
+  secret: ""
+
+# Outbound proxy values as forwarded by Arc with default values.
+Azure:
+  proxySettings:
+    isProxyEnabled: false
+    httpProxy: ""
+    httpsProxy: ""
+    noProxy: ""
+    proxyCert: ""

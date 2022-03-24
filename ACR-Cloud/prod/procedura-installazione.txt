@@ -1,0 +1,52 @@
+================= AZURE CONNECTED REGISTRY =========================
+
+> Service IP da scegliere in base a quelli disponibili #da controllare ad ogni deployment DEVE ESSERE UN CLUSTER IP!!
+> Connection string del registry on Azure
+> Storage class presente sul cluster
+
+1) Creazione del certificato
+openssl req -newkey rsa:4096 -nodes -sha256 -keyout ./mycert.key -x509 -days 365 -out ./ca.crt -addext "subjectAltName = IP:10.96.0.82"
+
+#l'ip selezionato dovrà essere collegato al certificato e al DNS da registrare, FQDN del DNS da settare come COMMON NAME in fase di creazione del certificato
+
+2) export certificato e chiave
+export TLS_CRT=$(cat ca.crt | base64 -w0) a
+export TLS_KEY=$(sudo cat mycert.key | base64 -w0)
+
+2) deploy registry
+helm upgrade --namespace connected-registry --create-namespace --install --set connectionString="ConnectedRegistryName=snreb00002acrsergnano;SyncTokenName=snreb00002acrsergnano;SyncTokenPassword=5y7fjJtpc77A418DXWYsYL0WIu88pCf/;ParentGatewayEndpoint=snreb00002acr.westeurope.data.azurecr.io;ParentEndpointProtocol=https" --set service.clusterIP=10.96.0.82  --set pvc.storageClassName="default" --set image="mcr.microsoft.com/acr/connected-registry:0.6.0" --set tls.crt=$TLS_CRT --set tls.key=$TLS_KEY connected-registry ./connected-registry
+
+3) copia del certificato su ogni nodo
+ scp -i /root/akshci_rsa ca.crt clouduser@10.64.92.6:/home/clouduser/ca.crt
+ 
+3b) ssh su ogni nodo
+
+ssh -i /root/akshci_rsa clouduser@10.64.92.6
+ 
+4) creazione della cartella all'interno di ogni nodo
+sudo mkdir -p /etc/containerd/certs.d/10.96.0.82:443
+
+5)  sudo cp /home/clouduser/ca.crt /etc/containerd/certs.d/10.96.0.82:443
+	sudo ls /etc/containerd/certs.d/10.96.0.82:443
+
+6) modifica del config.toml, risultato finale:
+
+sudo nano /etc/containerd/config.toml
+
+
+
+version = 2
+[plugins]
+  [plugins."io.containerd.grpc.v1.cri"]
+    sandbox_image = "ecpacr.azurecr.io/pause:3.4.1"
+  [plugins."io.containerd.grpc.v1.cri".registry]
+    config_path = "/etc/containerd/certs.d"     
+  [plugins."io.containerd.grpc.v1.cri".registry.configs."10.96.0.82:443".tls]
+    ca_file   = "/etc/containerd/certs.d/10.96.0.82:443/ca.crt"
+
+7) riavvio del demone su ogni nodo
+sudo systemctl restart containerd
+
+=================================================
+
+8) deployment di test con pull (eseguire kubectl apply -f deployment-test.yaml)

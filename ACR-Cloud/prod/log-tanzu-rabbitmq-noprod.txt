@@ -1,0 +1,13 @@
+
+
+================================== Env variables ==================================
+
+KUBECONFIG: /home/samuelepadula/.kube/config
+SERVICE IP ACR: 
+CONNECTION STRING: ConnectedRegistryName=snreb00002acrsergnano;SyncTokenName=snreb00002acrsergnano;SyncTokenPassword=5y7fjJtpc77A418DXWYsYL0WIu88pCf/;ParentGatewayEndpoint=snreb00002acr.westeurope.data.azurecr.io;ParentEndpointProtocol=https
+ENDPOINT REGISTRY AZURE: 
+NAMESPACE del connected registry: connected-registry
+CA_PATH: ./certs/ca.crt
+KEY_PATH: ./certs/cert.key
+=======================================================================================
+
