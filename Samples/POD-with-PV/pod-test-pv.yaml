@@ -1,0 +1,25 @@
+kind: Namespace
+apiVersion: v1
+metadata:
+  name: pod-with-pv-test
+  labels:
+    name: pod-with-pv-test
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: d1
+  namespace: pod-with-pv-test
+spec:
+  containers:
+    - name: debian
+      image: debian:9-slim
+      command: ["/bin/sleep"]
+      args: [ "3600" ]
+      volumeMounts:
+        - mountPath: /mnt
+          name: v1
+  volumes:
+    - name: v1
+      persistentVolumeClaim:
+        claimName: pvc-1
