@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-15T17:34:38.112Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="RYL1ZjTF_RgeYJR_pkQe" version="20.8.5" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-15T19:32:30.534Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="fmsPQcsDenFu-VeAIKSf" version="20.8.5" type="github">
   <diagram name="Page-1" id="e3a06f82-3646-2815-327d-82caf3d4e204">
     <mxGraphModel dx="2607" dy="1375" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
@@ -105,8 +105,8 @@
         <mxCell id="JWaV_-7sBsLBWSCKmQxA-20" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.arduino;fillColor=#36868D;strokeColor=none" vertex="1" parent="JWaV_-7sBsLBWSCKmQxA-18">
           <mxGeometry x="34.31796875000001" y="43.453125" width="40.364062499999996" height="18.5625" as="geometry" />
         </mxCell>
-        <mxCell id="JWaV_-7sBsLBWSCKmQxA-32" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Arduino Uno + Ethernet&lt;br&gt;192.168.1.100&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF8000;" vertex="1" parent="JWaV_-7sBsLBWSCKmQxA-33">
-          <mxGeometry x="-30" y="90" width="200" height="50" as="geometry" />
+        <mxCell id="JWaV_-7sBsLBWSCKmQxA-32" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Arduino Uno + Ethernet&lt;br&gt;192.168.1.100&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;de:ad:be:ef:fe:ed&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF8000;" vertex="1" parent="JWaV_-7sBsLBWSCKmQxA-33">
+          <mxGeometry x="-30" y="80" width="200" height="70" as="geometry" />
         </mxCell>
         <mxCell id="JWaV_-7sBsLBWSCKmQxA-36" value="&lt;b&gt;&lt;i&gt;Stanza Samuele&lt;/i&gt;&lt;/b&gt;" style="verticalLabelPosition=bottom;html=1;verticalAlign=top;align=center;shape=mxgraph.floorplan.room;fillColor=strokeColor;labelBackgroundColor=none;fontSize=16;fontColor=#000000;" vertex="1" parent="JWaV_-7sBsLBWSCKmQxA-37">
           <mxGeometry width="250" height="220" as="geometry" />
