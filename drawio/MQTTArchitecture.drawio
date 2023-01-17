@@ -1,1 +1,89 @@
-<mxfile host="app.diagrams.net" modified="2023-01-17T18:19:39.991Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="20.8.5" etag="5kefWeYcNLb0cZr9WaWM" type="github"><diagram id="o9ocDED9dtBz76oTLnET">UzV2zq1wL0osyPDNT0nNUTV2VTV2LsrPL4GwciucU3NyVI0MMlNUjV1UjYwMgFjVyA2HrCFY1qAgsSg1rwSLBiADYTaQg2Y1AA==</diagram></mxfile>
+<mxfile host="app.diagrams.net" modified="2023-01-17T18:26:38.921Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="20.8.5" etag="_c97dSRNzkReG7Jzuh93" type="github">
+  <diagram id="GbuyAlCA7ucRLAM9Jsy3" name="Page-1">
+    <mxGraphModel dx="1195" dy="630" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="qdnZULfPCPuXgq32BraW-1" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="160" y="310" width="170" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-5" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Arduino Uno + Ethernet&lt;br&gt;192.168.1.100&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;de:ad:be:ef:fe:ed&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF8000;" vertex="1" parent="qdnZULfPCPuXgq32BraW-1">
+          <mxGeometry x="-29.142857142857142" y="80" width="200" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-19" value="" style="group" vertex="1" connectable="0" parent="qdnZULfPCPuXgq32BraW-1">
+          <mxGeometry x="-50.56999999999999" width="175.8842857142857" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-2" value="" style="group" vertex="1" connectable="0" parent="qdnZULfPCPuXgq32BraW-19">
+          <mxGeometry x="69.99857142857142" width="105.88571428571429" height="108" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-3" value="&lt;span style=&quot;font-size: 18px; background-color: rgb(0, 0, 0);&quot;&gt;&lt;font color=&quot;#ff8000&quot;&gt;&lt;br&gt;&lt;/font&gt;&lt;/span&gt;" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn2.iconfinder.com/data/icons/electronic-13/480/3-electronic-arduino-chipset-icon-2-128.png" vertex="1" parent="qdnZULfPCPuXgq32BraW-2">
+          <mxGeometry width="104.91428571428571" height="104.91428571428571" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-4" value="" style="dashed=0;outlineConnect=0;html=1;align=center;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;shape=mxgraph.weblogos.arduino;fillColor=#36868D;strokeColor=none" vertex="1" parent="qdnZULfPCPuXgq32BraW-2">
+          <mxGeometry x="33.33745535714287" y="43.453125" width="39.21080357142856" height="18.5625" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-14" value="MQTT Publisher and Subscriber" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="qdnZULfPCPuXgq32BraW-19">
+          <mxGeometry y="10" width="70" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-6" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="290" y="10" width="167" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-7" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Raspberry Pi 3B&lt;br&gt;192.168.1.81&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF8000;" vertex="1" parent="qdnZULfPCPuXgq32BraW-6">
+          <mxGeometry y="88.23529411764706" width="150" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-8" value="" style="group" vertex="1" connectable="0" parent="qdnZULfPCPuXgq32BraW-6">
+          <mxGeometry x="26.79144385026738" width="140.20855614973263" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-9" value="" style="group" vertex="1" connectable="0" parent="qdnZULfPCPuXgq32BraW-8">
+          <mxGeometry width="75.01604278074866" height="88.67647058823529" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-10" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.hardware_board;fillColor=#5294CF;gradientColor=none;labelBackgroundColor=#000000;fontSize=18;fontColor=#FF8000;" vertex="1" parent="qdnZULfPCPuXgq32BraW-9">
+          <mxGeometry width="75.01604278074866" height="88.67647058823529" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-11" value="" style="shape=image;html=1;verticalAlign=top;verticalLabelPosition=bottom;labelBackgroundColor=#ffffff;imageAspect=0;aspect=fixed;image=https://cdn1.iconfinder.com/data/icons/fruit-136/64/Fruit_iconfree_Filled_Outline_raspberry-healthy-organic-food-fruit_icon-128.png;fontSize=18;fontColor=#FF8000;" vertex="1" parent="qdnZULfPCPuXgq32BraW-9">
+          <mxGeometry x="20.540106951871657" y="27.573529411764707" width="33.529411764705884" height="33.529411764705884" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-12" value="MQTT Broker Server" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="1">
+          <mxGeometry x="170" y="50" width="138" height="20" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-15" value="" style="endArrow=classic;html=1;rounded=0;exitX=0.406;exitY=0;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="qdnZULfPCPuXgq32BraW-3" target="qdnZULfPCPuXgq32BraW-7">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="590" y="330" as="sourcePoint" />
+            <mxPoint x="640" y="280" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-17" value="Subscribe on topic:&lt;br style=&quot;font-size: 14px;&quot;&gt;&amp;nbsp;&lt;i style=&quot;font-size: 14px;&quot;&gt;LGSAMROOM01/cmd&lt;/i&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;labelBorderColor=default;" vertex="1" connectable="0" parent="qdnZULfPCPuXgq32BraW-15">
+          <mxGeometry x="-0.4806" y="-1" relative="1" as="geometry">
+            <mxPoint x="-25" y="-79" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-18" value="" style="group" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="620" y="239.99999999999997" width="110" height="70.00000000000003" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-13" value="" style="sketch=0;aspect=fixed;pointerEvents=1;shadow=0;dashed=0;html=1;strokeColor=none;labelPosition=center;verticalLabelPosition=bottom;verticalAlign=top;align=center;fillColor=#00188D;shape=mxgraph.mscae.enterprise.android_phone" vertex="1" parent="qdnZULfPCPuXgq32BraW-18">
+          <mxGeometry y="3.3300000000000125" width="40" height="66.67" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-16" value="MQTT Publisher and Subscriber" style="text;html=1;strokeColor=#82b366;fillColor=#d5e8d4;align=center;verticalAlign=middle;whiteSpace=wrap;overflow=hidden;" vertex="1" parent="qdnZULfPCPuXgq32BraW-18">
+          <mxGeometry x="50" width="60" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-20" value="" style="endArrow=classic;html=1;rounded=0;exitX=0;exitY=0.5;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="qdnZULfPCPuXgq32BraW-13">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="490" y="320" as="sourcePoint" />
+            <mxPoint x="383.84144971878527" y="148.23529411764707" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-21" value="Publish on topic:&lt;br style=&quot;font-size: 14px;&quot;&gt;&amp;nbsp;&lt;i style=&quot;font-size: 14px;&quot;&gt;LGSAMROOM01/cmd&lt;/i&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;labelBorderColor=default;" vertex="1" connectable="0" parent="qdnZULfPCPuXgq32BraW-20">
+          <mxGeometry x="-0.4806" y="-1" relative="1" as="geometry">
+            <mxPoint x="-29" y="-72" as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-24" value="Publish on topic:&lt;br style=&quot;font-size: 14px;&quot;&gt;&amp;nbsp;&lt;i style=&quot;font-size: 14px;&quot;&gt;LGSAMROOM01/status&lt;/i&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;labelBorderColor=default;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="220.00092908338118" y="230.00090753018713" as="geometry" />
+        </mxCell>
+        <mxCell id="qdnZULfPCPuXgq32BraW-25" value="Subscribe on topic:&lt;br style=&quot;font-size: 14px;&quot;&gt;&amp;nbsp;&lt;i style=&quot;font-size: 14px;&quot;&gt;LGSAMROOM01/status&lt;/i&gt;" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];fontSize=14;labelBorderColor=default;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="590.0009290833812" y="210.00090753018713" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
