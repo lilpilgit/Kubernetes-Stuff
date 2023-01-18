@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2023-01-18T14:35:40.697Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="20.8.5" etag="LjtK8-fywu-uCXYEIMCy" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-18T14:36:10.492Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" version="20.8.5" etag="xEE7pikWNtSdUNidLPl3" type="github">
   <diagram id="GbuyAlCA7ucRLAM9Jsy3" name="Page-1">
     <mxGraphModel dx="2022" dy="630" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -11,10 +11,10 @@
           <mxGeometry x="-130" y="310" width="480" height="190" as="geometry" />
         </mxCell>
         <mxCell id="qdnZULfPCPuXgq32BraW-1" value="" style="group" vertex="1" connectable="0" parent="1">
-          <mxGeometry x="160" y="310" width="170" height="150" as="geometry" />
+          <mxGeometry x="160" y="310" width="190.85714285714286" height="150" as="geometry" />
         </mxCell>
-        <mxCell id="qdnZULfPCPuXgq32BraW-5" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Arduino Uno + Ethernet&lt;br&gt;192.168.1.100&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;de:ad:be:ef:fe:ed&lt;/font&gt;&lt;/b&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF8000;" vertex="1" parent="qdnZULfPCPuXgq32BraW-1">
-          <mxGeometry x="-29.142857142857142" y="80" width="200" height="70" as="geometry" />
+        <mxCell id="qdnZULfPCPuXgq32BraW-5" value="&lt;font face=&quot;Lucida Console&quot;&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Arduino Uno + Ethernet&lt;br&gt;192.168.1.100&lt;br&gt;&lt;/b&gt;&lt;/font&gt;&lt;b&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;de:ad:be:ef:fe:ed&lt;/font&gt;&lt;/b&gt;&lt;/font&gt;&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;&lt;br&gt;&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF8000;" vertex="1" parent="qdnZULfPCPuXgq32BraW-1">
+          <mxGeometry x="-49.14285714285714" y="80" width="240" height="70" as="geometry" />
         </mxCell>
         <mxCell id="qdnZULfPCPuXgq32BraW-19" value="" style="group" vertex="1" connectable="0" parent="qdnZULfPCPuXgq32BraW-1">
           <mxGeometry x="-50.56999999999999" width="175.8842857142857" height="108" as="geometry" />
@@ -34,8 +34,8 @@
         <mxCell id="qdnZULfPCPuXgq32BraW-6" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="290" y="10" width="323.5" height="270" as="geometry" />
         </mxCell>
-        <mxCell id="qdnZULfPCPuXgq32BraW-7" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Raspberry Pi 3B&lt;br&gt;192.168.1.81&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF8000;" vertex="1" parent="qdnZULfPCPuXgq32BraW-6">
-          <mxGeometry y="88.23529411764706" width="150" height="50" as="geometry" />
+        <mxCell id="qdnZULfPCPuXgq32BraW-7" value="&lt;font color=&quot;#000000&quot; style=&quot;font-size: 16px;&quot;&gt;&lt;b&gt;Raspberry Pi 3B&lt;br&gt;192.168.1.81&lt;/b&gt;&lt;/font&gt;" style="text;html=1;align=center;verticalAlign=middle;resizable=0;points=[];autosize=1;strokeColor=none;fillColor=none;fontColor=#FF8000;fontFamily=Lucida Console;" vertex="1" parent="qdnZULfPCPuXgq32BraW-6">
+          <mxGeometry x="-10" y="88.23529411764706" width="170" height="50" as="geometry" />
         </mxCell>
         <mxCell id="qdnZULfPCPuXgq32BraW-8" value="" style="group" vertex="1" connectable="0" parent="qdnZULfPCPuXgq32BraW-6">
           <mxGeometry x="26.79144385026738" width="140.20855614973263" height="150" as="geometry" />
