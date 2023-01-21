@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-01-21T17:19:05.669Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="1B3UK1wy6zm9wpzqzGIX" version="20.8.10" type="github">
+<mxfile host="app.diagrams.net" modified="2023-01-21T17:19:30.766Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36" etag="K_Fqf397G8eyvg4RJcI7" version="20.8.10" type="github">
   <diagram name="Page-1" id="e3a06f82-3646-2815-327d-82caf3d4e204">
-    <mxGraphModel dx="1434" dy="756" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
+    <mxGraphModel dx="1687" dy="889" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1.5" pageWidth="1169" pageHeight="826" background="none" math="0" shadow="0">
       <root>
         <mxCell id="0" style=";html=1;" />
         <mxCell id="1" style=";html=1;" parent="0" />
@@ -75,14 +75,11 @@
         <mxCell id="6a7d8f32e03d9370-13" value="&lt;b style=&quot;border-color: var(--border-color); font-size: 16px;&quot;&gt;Router&amp;nbsp;&lt;br&gt;192.168.1.254&lt;br&gt;&lt;/b&gt;" style="verticalLabelPosition=bottom;aspect=fixed;html=1;verticalAlign=top;strokeColor=none;shape=mxgraph.citrix.router;fillColor=#66B2FF;gradientColor=#0066CC;fontSize=14;" parent="B9Zo2BwohG0ni2MZEKjd-23" vertex="1">
           <mxGeometry x="17.5" y="41.5" width="55" height="36.5" as="geometry" />
         </mxCell>
-        <mxCell id="B9Zo2BwohG0ni2MZEKjd-24" style="edgeStyle=none;rounded=0;html=1;startSize=10;endSize=10;jettySize=auto;orthogonalLoop=1;fontSize=14;endArrow=none;endFill=0;strokeWidth=2;" parent="1" source="JWaV_-7sBsLBWSCKmQxA-74" target="JWaV_-7sBsLBWSCKmQxA-85" edge="1">
+        <mxCell id="B9Zo2BwohG0ni2MZEKjd-24" style="edgeStyle=none;rounded=0;html=1;startSize=10;endSize=10;jettySize=auto;orthogonalLoop=1;fontSize=14;endArrow=none;endFill=0;strokeWidth=2;startArrow=none;" parent="1" target="JWaV_-7sBsLBWSCKmQxA-85" edge="1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="1093" y="482.0303270622285" as="sourcePoint" />
+            <mxPoint x="1098.9" y="412.3218968531469" as="sourcePoint" />
             <mxPoint x="753.2449999999999" y="356.24699999999996" as="targetPoint" />
           </mxGeometry>
-        </mxCell>
-        <mxCell id="B9Zo2BwohG0ni2MZEKjd-26" value="" style="outlineConnect=0;dashed=0;verticalLabelPosition=bottom;verticalAlign=top;align=center;html=1;shape=mxgraph.aws3.mqtt_protocol;fillColor=#5294CF;gradientColor=none;labelBackgroundColor=#000000;fontSize=18;fontColor=#FF8000;" parent="1" vertex="1">
-          <mxGeometry x="130" y="80" width="63" height="66" as="geometry" />
         </mxCell>
         <mxCell id="JWaV_-7sBsLBWSCKmQxA-23" style="edgeStyle=none;rounded=0;html=1;startSize=10;endSize=10;jettySize=auto;orthogonalLoop=1;fontSize=14;endArrow=none;endFill=0;strokeWidth=2;entryX=0.087;entryY=0.903;entryDx=0;entryDy=0;entryPerimeter=0;" parent="1" source="JWaV_-7sBsLBWSCKmQxA-20" target="6a7d8f32e03d9370-13" edge="1">
           <mxGeometry relative="1" as="geometry">
@@ -172,6 +169,12 @@
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="750.7449999999999" y="436.24700000000007" as="targetPoint" />
             <mxPoint x="556" y="449.2040607583756" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="tw1x2rw4JNAtCxhjFe1h-8" value="" style="edgeStyle=none;rounded=0;html=1;startSize=10;endSize=10;jettySize=auto;orthogonalLoop=1;fontSize=14;endArrow=none;endFill=0;strokeWidth=2;" edge="1" parent="1" source="JWaV_-7sBsLBWSCKmQxA-74">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1217.3315508021387" y="422.6045381579272" as="sourcePoint" />
+            <mxPoint x="1141.9" y="416.7658634037589" as="targetPoint" />
           </mxGeometry>
         </mxCell>
       </root>
